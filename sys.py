@@ -1,27 +1,27 @@
 import sys
 
-if len(sys.argv) == 3:
-    name = sys.argv[0]
-    rollno = sys.argv[1]
+script_name = sys.argv[0]
+
+if len(sys.argv) == 7:  # Changed from 3 to 7 since you need 6 arguments + script name
+    name = sys.argv[1]
     mark1 = sys.argv[2]
     mark2 = sys.argv[3]
-    mark3= sys.argv[4]
+    mark3 = sys.argv[4]
     mark4 = sys.argv[5]
     mark5 = sys.argv[6]
     print("User provided input values:")
 else:
-    name = "Sam"
-    rollno = "54"
-    mark1 = "30"
+    name = "sam"
+    mark1 = "35"
     mark2 = "35"
-    mark3= "50"
-    mark4 = "45"
-    mark5 = "25"
+    mark3 = "35"
+    mark4 = "35"
+    mark5 = "35"
     print("No input given, using default values:")
 
 total = int(mark1) + int(mark2) + int(mark3) + int(mark4) + int(mark5)
 average = total / 5 
-print(" Name:", name)
+print("File Name:", script_name)
 print("Student Name:", name)
 print("Subject 1 marks :", mark1)
 print("Subject 2 marks :", mark2)
